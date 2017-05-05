@@ -1,5 +1,5 @@
 /**@license MIT-promiscuous-©Ruben Verborgh*/
-(function (func, obj) {
+module.exports = (function (func, obj) {
   // Type checking utility function
   function is(type, item) { return (typeof item)[0] == type; }
 
@@ -75,7 +75,7 @@
 
   // Finalizes the promise by resolving/rejecting it with the transformed value
   function finalize(promise, resolve, reject, value, transform) {
-    setImmediate(function () {
+    setTimeout(function () {
       try {
         // Transform the value through and check whether it's a promise
         value = transform(value);
@@ -91,11 +91,10 @@
           transform.call(value, resolve, reject);
       }
       catch (error) { reject(error); }
-    });
+    }, 0);
   }
 
   // Export the main module
-  module.exports = Promise;
 
   // Creates a resolved promise
   Promise.resolve = ResolvedPromise;
@@ -134,4 +133,6 @@
       });
     });
   };
+
+  return Promise;
 })('f', 'o');

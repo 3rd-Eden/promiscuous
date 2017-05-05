@@ -1,4 +1,5 @@
-var Promise = require('../promiscuous');
+var Promise = require('./');
+
 module.exports = {
   resolved: Promise.resolve,
   rejected: Promise.reject,

@@ -1,22 +1,17 @@
 {
-  "name": "promiscuous",
-  "version": "0.7.0",
-  "description": "A minimal and fast promise implementation",
-  "author": "Ruben Verborgh <ruben.verborgh@gmail.com>",
+  "name": "fulfilling",
+  "version": "0.0.0",
+  "description": "A minimal and fast cross platform promise polyfill based on promiscuous",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RubenVerborgh/promiscuous.git"
+    "url": "https://github.com/3rd-Eden/fulfilling.git"
   },
-  "bugs": {
-    "url": "https://github.com/RubenVerborgh/promiscuous/issues"
-  },
-  "main": "promiscuous.js",
+  "main": "index.js",
   "scripts": {
-    "test": "promises-aplus-tests test/adapter"
+    "test": "promises-aplus-tests test.js"
   },
   "devDependencies": {
-    "promises-aplus-tests": "2.0.x",
-    "uglify-js": "2.2.x"
+    "promises-aplus-tests": "2.0.x"
   }
 }
